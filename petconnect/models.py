@@ -14,6 +14,16 @@ class Loja(models.Model):
 
     def __str__(self):
         return self.name
+    
+class Promocoes(models.Model):
+    cod = models.CharField(max_length=100)
+    descricao = models.CharField(max_length=500)
+    duracao = models.DateTimeField(auto_now_add=True)
+    status = models.BooleanField(default=False)
+    porcentagem = models.FloatField()
+
+    def __str__(self):
+        return self.cod
 
 class Usuario(models.Model):
     name = models.CharField(max_length=100)
@@ -28,15 +38,7 @@ class Usuario(models.Model):
     def __str__(self):
         return self.name
 
-class Agendamento(models.Model):
-    id_loja = models.ForeignKey(Loja, on_delete=models.CASCADE)
-    id_usuario = models.ForeignKey(Usuario, on_delete=models.CASCADE)
-    id_servico = models.ForeignKey(Servico, on_delete=models.CASCADE)
-    id_animal = models.ForeignKey(Animais, on_delete=models.CASCADE)
-    data_hora_agendamento = models.DateTimeField()
-    data_hora_consulta = models.DateTimeField(auto_now_add=True)
-    status = models.BooleanField(default=False)
-    desc_problema = models.CharField(max_length=500)
+
 
 class Servico(models.Model):
     nome = models.CharField(max_length=100)
@@ -58,13 +60,15 @@ class Animais(models.Model):
     def __str__(self):
         return self.name
 
-class Promocoes(models.Model):
-    cod = models.CharField(max_length=100)
-    descricao = models.CharField(max_length=500)
-    duracao = models.DateTimeField(auto_now_add=True)
+class Agendamento(models.Model):
+    id_loja = models.ForeignKey(Loja, on_delete=models.CASCADE)
+    id_usuario = models.ForeignKey(Usuario, on_delete=models.CASCADE)
+    id_servico = models.ForeignKey(Servico, on_delete=models.CASCADE)
+    id_animal = models.ForeignKey(Animais, on_delete=models.CASCADE)
+    data_hora_agendamento = models.DateTimeField()
+    data_hora_consulta = models.DateTimeField(auto_now_add=True)
     status = models.BooleanField(default=False)
-    porcentagem = models.FloatField()
+    desc_problema = models.CharField(max_length=500)
 
     def __str__(self):
-        return self.cod
-    
+        return self.id_loja
