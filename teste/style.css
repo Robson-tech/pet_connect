@@ -265,64 +265,6 @@ nav > ul > li:hover{
     cursor: pointer;
 }
 
-#rede-cred{
-    display: flex;
-    margin-top: 70px;
-}
-
-#conteudo{
-    color: #8600C6;
-    width: 510px;
-    margin-left: 70px;
-}
-
-#conteudo > div{
-    display: flex;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    font-weight: bolder;
-}
-
-#conteudo > div > h1{
-    font-size: 28px;
-}
-
-#conteudo > div > img{
-    padding-right: 10px;
-}
-
-#conteudo > h3{
-    padding-bottom: 15px;
-    font-size: 23px;
-}
-
-#conteudo > p{
-    padding-bottom: 40px;
-    font-size: 16px;
-}
-
-#conteudo > button{
-    background-color: #F4B706;
-    border: none;
-    border-radius: 20px;
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-}
-
-#conteudo > button > a{
-    text-decoration: none;
-    color: #8600C6;
-    font-weight: bold;
-}
-
-#conteudo > button:hover{
-    background-color: #d6a101;
-    transform: scale(1.1);
-    transition: 1s;
-}
-
 .comments > #div1{
     color: #8600C6;
     display: flex;
