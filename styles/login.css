@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Blinker&family=Nunito&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    margin-top: -200px;
+}
+
+.conteiner{
+    display: inline-block;
+}
+
+#conteiner1{
+    width: 800px;
+    height: 900px;
+}
+
+#conteiner-casa{
+    position: absolute;
+}
+
+#casa{
+    position: relative;
+    padding-left: 20%;
+    top: 40%;
+}
+
+#conteiner2{
+    width: 500px;
+    position: absolute;
+    top: 20%;
+}
+
+#conteiner-child{
+    position: relative;
+    text-align: center;
+}
+
+h2{
+    color: #8600C6;
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 700;
+    padding-bottom: 20px;
+}
+
+.formulario-input{
+    padding: 15px;
+}
+
+.formulario-input input{
+    width: 300px;
+    height: 20px;
+    padding: 1em;
+    border-radius: 40px;
+    border: none;
+    background: #FAFAFA;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+#username{
+    background-image: url("/assets/profile-user\ 1.png");
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 2em;
+    padding-left: 1.3em;
+}
+
+#senha{
+    background-image: url("/assets/padlock\ 1.png");
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 2em;
+    padding-left: 1.3em;
+}
+
+.formulario-input p{
+    padding-top: 1.5em;
+}
+
+.formulario-input p a{
+    color: #8600C6;
+}
+
+#botao{
+    width: 209px;
+    height: 33px;
+    border: none;
+    border-radius: 40px;
+    background: #F4B706;
+    color: #FAFAFA;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+}
+
+#botao:hover{
+    background-color: #ecb203;
+    transform: scale(1.1);
+    transition: 1s;
+}
+
+#nao-possui{
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+}
+
+#nao-possui a{
+    color: #8600C6;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#redes-sociais{
+    padding-top: 10px;
+}
+
+#redes-sociais img{
+    width: 30px;
+    height: 30px;
+}
