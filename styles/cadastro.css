@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Blinker&family=Nunito&display=swap');
+
+*{
+    margin: 0px;
+    font-family: 'Questrial', Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: #F2E9EB;
+}
+
+header{
+    background-color: #8600C6;
+    height: 100px;
+}
+
+header > div >  img{
+    width: 70px;
+    height: 70px;
+    margin-top: 20px;
+}
+
+#img_container{
+    text-align: center;
+}
+
+h1{
+    color: #8600C6;
+    text-align: center;
+    font-size: 40px;
+    padding-top: 10px;
+}
+
+#formulario{
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+
+#formulario > form{
+    position: relative;
+    display: inline-block;
+}
+
+form > input{
+    width: 400px;
+    height: 40px;
+    background: #D9D9D9;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    border: none;
+    margin-top: 20px;
+    padding-left: 10px;
+    outline: 0;
+    display: block;
+}
+
+label{
+    font-size: 20px;
+    opacity: 0.7;
+}
+
+.botao, .botao > input{
+    width: 130px;
+    height: 36px;
+    font-size: 20px;
+    background-color: #F4B706;
+    color: #D9D9D9;
+    display: inline-block;
+    margin-top: 30px;
+    margin-left: 10px;
+    border-radius: 20px;
+    text-decoration: none;
+    margin-bottom: 5px;
+}
+
+#botao1{
+    border: none;
+}
+
+form a:hover{
+    border: none;
+}
+
+form :hover, #botao1:hover{
+    background-color: #F2E9EB;
+    transition: 1s;
+    transform: scale(1.1);
+    color: #8600C6;
+    border: #8600C6 1px solid;
+    cursor: pointer;
+}
