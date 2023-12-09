@@ -1,0 +1,79 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetConnect</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    {% block style %}
+    <link rel="shortcut icon" href="{% static 'img/casa.png' %}" type="image/x-icon">
+    {% endblock %}
+</head>
+<body>
+    {% block header %}
+    <header>
+        <img src="{% static 'img/logo.png' %}" alt="Logo do PetConnect">
+        <button>
+            <a href="{% url 'petconnect:login' %}">Área Logada</a>
+            <div id="triangulo-para-baixo"></div>
+        </button>
+    </header>
+    <nav>
+        <ul>
+            <li><img src="{% static 'img/interrogacao.png' %}" alt=""><a href="{% url 'petconnect:sobre' %}">SOBRE NÓS</a></li>
+            <li><img src="{% static 'img/medal.png' %}" alt=""><a href="#">SERVIÇOS</a></li>
+            <li><img src="{% static 'img/crown.png' %}" alt=""><a href="#">CADASTRO</a></li>
+            <li><img src="{% static 'img/star.png' %}" alt=""><a href="#">AVALIAÇÕES</a></li>
+            <li><img src="{% static 'img/phone_call.png' %}" alt=""><a href="{% url 'petconnect:contato' %}">CONTATO</a></li>
+        </ul>
+    </nav>
+    {% endblock %}
+    {% block content %}{% endblock %}
+    {% block footer %}
+    <footer>
+        <section>
+            <h3>Como podemos ajudar?</h3>
+            <p>Conheça mais sobre nossa empresa, políticas e tenha o melhor atendimento do mercado pet 😍</p>
+        </section>
+
+        <div>
+            <h3>Atendimento</h3>
+            <ul>
+                <li>Central de Atendimento</li>
+            </ul>
+        </div>
+        <div>
+            <h3>Institucional</h3>
+            <ul>
+                <li>Empresa</li>
+                <li>Termos e condições de uso</li>
+            </ul>
+        </div>
+        <div>
+            <h3>Políticas</h3>
+            <ul>
+                <li>Aviso de privacidade</li>
+                <li>Politica de cookies</li>
+                <li>Politica de white hat</li>
+                <li>Politica de cancelamento</li>
+            </ul>
+        </div>
+    </footer>
+    <div id="section2">
+        <div>
+            <h3>Onde Estamos</h3>
+            <img src="{% static 'img/facebook.png' %}" alt="">
+            <img src="{% static 'img/instagram.png' %}" alt="">
+            <img src="{% static 'img/twitter.png' %}" alt="">
+            <img src="{% static 'img/youtube.png' %}" alt="">
+        </div>
+        <div>
+            <h3>Baixe o App</h3>
+            <img src="{% static 'img/google_apple.png' %}" alt="">
+        </div>
+    </div>
+    <section id="the-end"><p>© PetConnect - 2023</p></section>
+    {% endblock %}
+</body>
+</html>
