@@ -4,20 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{% static 'img/casa.png' %}" type="image/x-icon">
     <title>PetConnect</title>
     <link rel="stylesheet" href="{% static 'css/index.css' %}">
     {% block style %}
-    <link rel="shortcut icon" href="{% static 'img/casa.png' %}" type="image/x-icon">
     {% endblock %}
 </head>
 <body>
     {% block header %}
     <header>
+        <h1>Bem Vindo {% if user.is_authenticated %}{{ user.first_name }}{% else %}Visitante{% endif %}</h1>
         <img src="{% static 'img/logo.png' %}" alt="Logo do PetConnect">
         <button>
             <a href="{% url 'petconnect:login' %}">Área Logada</a>
             <div id="triangulo-para-baixo"></div>
         </button>
+        {% if user.is_authenticated %}
+        <button>
+            <a href="{% url 'petconnect:logout' %}">Sair</a>
+        </button>
+        {% endif %}
     </header>
     <nav>
         <ul>

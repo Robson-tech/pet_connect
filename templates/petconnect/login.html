@@ -21,14 +21,17 @@
     <div id="conteiner2" class="conteiner">
         <div id="conteiner-child">
             <h2>USER LOGIN</h2>
-            <div class="formulario-input">
-                <input id="username" type="text" name="username" placeholder="    Insira o nome de usuário">
-            </div>
-            <div class="formulario-input">
-                <input id="senha" type="password" name="senha" placeholder="    Insira sua senha">
-                <p><a href="#">Esqueceu a senha?</a></p>
-            </div>
-            <input type="button" value="ENTRAR" id="botao">
+            <form action="{% url 'petconnect:login' %}" method="post">
+                {% csrf_token %}
+                <div class="formulario-input">
+                    <input id="username" type="text" name="email" placeholder="    Insira seu E-mail">
+                </div>
+                <div class="formulario-input">
+                    <input id="senha" type="password" name="senha" placeholder="    Insira sua senha">
+                    <p><a href="#">Esqueceu a senha?</a></p>
+                </div>
+                <input type="submit" value="ENTRAR" id="botao">
+            </form>
             <p id="nao-possui">Não possui uma conta? <a href="#">Clique aqui!</a></p>
 
             <div id="linha-conteiner">

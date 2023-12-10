@@ -1,5 +1,27 @@
 from django.db import models
+from django.contrib.auth.models import AbstractUser
+from .managers import CustomUserManager
 
+
+class Usuario(AbstractUser):
+    username = models.CharField(max_length=100, unique=False, blank=True, null=True)
+    email = models.EmailField(max_length=100, unique=True)
+    endereco = models.CharField(max_length=100, blank=True, null=True)
+    telefone = models.CharField(max_length=20)
+    is_dono = models.BooleanField(default=False)
+    image = models.ImageField(upload_to='usuario_image', default='usuario_image/default.png', blank=True, null=True)
+    data_nascimento = models.DateField(null=True, blank=True)
+    cpf = models.CharField(max_length=20, null=True, blank=True)
+    biografia = models.TextField(max_length=500, blank=True, null=True)
+
+    USERNAME_FIELD = 'email'
+    REQUIRED_FIELDS = ['first_name', 'last_name', 'cpf', 'telefone']
+
+    objects = CustomUserManager()
+
+    def __str__(self):
+        return self.email
+    
 
 class Loja(models.Model):
     name = models.CharField(max_length=100)
@@ -14,6 +36,7 @@ class Loja(models.Model):
     def __str__(self):
         return self.name
     
+    
 class Promocoes(models.Model):
     cod = models.CharField(max_length=100)
     descricao = models.CharField(max_length=500)
@@ -23,20 +46,6 @@ class Promocoes(models.Model):
 
     def __str__(self):
         return self.cod
-
-class Usuario(models.Model):
-    name = models.CharField(max_length=100)
-    email = models.CharField(max_length=100)
-    password = models.CharField(max_length=100)
-    telefone = models.CharField(max_length=20)
-    endereco = models.CharField(max_length=100)
-    data_nascimento = models.DateField()
-    is_dono = models.BooleanField(default=False)
-    image = models.ImageField(upload_to='usuario_image', blank=True, default='usuario_image/default.png')
-
-    def __str__(self):
-        return self.name
-
 
 
 class Servico(models.Model):
@@ -49,6 +58,7 @@ class Servico(models.Model):
     def __str__(self):
         return self.name
 
+
 class Animais(models.Model):
     nome = models.CharField(max_length=100)
     raca = models.CharField(max_length=100)
@@ -58,6 +68,7 @@ class Animais(models.Model):
 
     def __str__(self):
         return self.name
+
 
 class Agendamento(models.Model):
     id_loja = models.ForeignKey(Loja, on_delete=models.CASCADE)
