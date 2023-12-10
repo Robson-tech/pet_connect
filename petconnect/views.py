@@ -5,12 +5,16 @@ def index(request):
     return render(request, 'petconnect/index.html')
 
 
-def contato(request):
-    return render(request, 'petconnect/contato.html')
-
-
 def login(request):
     return render(request, 'petconnect/login.html')
+
+
+def cadastro(request):
+    return render(request, 'petconnect/cadastro.html')
+
+
+def contato(request):
+    return render(request, 'petconnect/contato.html')
 
 
 def sobre(request):
