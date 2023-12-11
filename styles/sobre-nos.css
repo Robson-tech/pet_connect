@@ -161,106 +161,88 @@ nav > ul > li:hover{
     margin-top: 20px;
 }
 
-#Banner2{
-    width: 75%;
-    margin: 20px auto;
-}
-
-#Banner2 > div{
-    width: 400px;
-    background-color: #F4B706;
-    margin: 1.5em;
-    padding: 1em;
-    display: inline-block;
-    border-radius: 10px;
-}
-
-#Banner2 > div > h2{
-    color: #8600C6;
-    text-align: center;
-    padding-bottom: 1.2em;
-}
-
-#Banner2 > div > p{
-    color: #fff;
-    font-size: 18px;
-}
-
-#como-chegar{
-    width: 900px;
-    margin: 20px auto;
-    text-align: center;
-}
-
-#como-chegar > h1{
-    color: #8600C6;
-    padding-bottom: 1.2em;
-}
-
-#titulo{
-    margin-top: 70px;
-    margin-left: 160px;
-    color: #F4B706;
-}
-
-#mandar-mensagem{
-    width: 1000px;
-    margin: 0 auto;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    padding-left: 30px;
-    padding-right: 30px;
-    background-color: #8600C6;
-    border-radius: 10px;
-}
-
-#mandar-mensagem2{
-    width: 700px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 10px;
-}
-
-#mandar-mensagem2 > div > label{
-    color: #8600C6;
-    font-size: 18px;
-    font-weight: bold;
-}
-
-#username, #email, #mensagem{
-    display: block;
+#Nossa-Missao{
     width: 90%;
-    margin: 10px auto;
-    padding: 5px;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    border-bottom: #8700c62d solid;
-}
-
-#mensagem{
-    height: 100px;
-}
-
-#botao{
-    width: 80px;
-    height: 30px;
-    text-align: center;
-    border: none;
-    background-color: #F4B706;
-    border-radius: 10px;
+    background-color: #8600C6;
     color: #fff;
-    float: right;
-    cursor: pointer;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    padding-top: 80px;
+    padding-left: 135px;
+    padding-bottom: 90px;
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
-#botao:hover{
-    background-color: #d6a101;
-    transform: scale(1.1);
-    transition: 1s;
+#Nossa-Missao p{
+    width: 80%;
 }
+
+#Nossa-Missao h2{
+    padding-bottom: 20px;
+}
+
+#Nossa-Equipe{
+    width: 70%;
+    margin: 100px auto;
+}
+
+#equipe{
+    padding: 20px;
+    margin: 0 auto;
+    display: flex;
+}
+
+#equipe h2, #Nossa-Equipe h2{
+    text-align: center;
+    color: #8600C6;
+}
+
+#equipe h3{
+    text-align: center;
+    font-weight: lighter;
+    color: #8600C6;
+}
+
+.equipe-nome{
+    margin: 20px;
+}
+
+.circulo {
+    background: lightblue;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+
+#vantagens{
+    width: 80%;
+    margin: 50px auto;
+    color: #8600C6;
+}
+
+#vantagens h3{
+    text-align: center;
+    background-color: #F4B706;
+    color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    width: 50%;
+    margin: 20px auto;
+}
+
+#vantagens div{
+    padding: 20px;
+    text-align: center;
+}
+
+.linha{
+    display: flex;
+    flex-direction: row;
+}
+
+.colunas{
+    width: 50%;
+}
+
 
 #mais-duvidas{
     width: 70%;
