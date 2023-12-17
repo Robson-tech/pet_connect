@@ -21,6 +21,19 @@ class Usuario(AbstractUser):
 
     def __str__(self):
         return self.email
+
+
+class Animais(models.Model):
+    dono = models.ForeignKey(Usuario, on_delete=models.CASCADE)
+    nome = models.CharField(max_length=100)
+    idade = models.IntegerField()
+    especie = models.CharField(max_length=100, default='Desconhecido')
+    raca = models.CharField(max_length=100)
+    sexo = models.CharField(max_length=100, default='Desconhecido')
+    image = models.ImageField(upload_to='animais_image', blank=True, null=True)
+
+    def __str__(self):
+        return self.name
     
 
 class Loja(models.Model):
@@ -54,17 +67,6 @@ class Servico(models.Model):
     preco = models.FloatField()
     id_loja = models.ForeignKey(Loja, on_delete=models.CASCADE)
     id_promocao = models.ForeignKey(Promocoes, on_delete=models.CASCADE, blank=True, null=True)
-
-    def __str__(self):
-        return self.name
-
-
-class Animais(models.Model):
-    nome = models.CharField(max_length=100)
-    raca = models.CharField(max_length=100)
-    idade = models.IntegerField()
-    id_dono = models.ForeignKey(Usuario, on_delete=models.CASCADE)
-    image = models.ImageField(upload_to='animais_image', blank=True, default='animais_image/default.png')
 
     def __str__(self):
         return self.name

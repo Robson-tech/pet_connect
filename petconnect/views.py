@@ -1,6 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
-from .models import Usuario
+from django.contrib.auth.decorators import login_required
+import json
+from .models import Usuario, Animais
 
 
 def index(request):
@@ -23,7 +25,7 @@ def logar(request):
 
 def deslogar(request):
     logout(request)
-    return render(request, 'petconnect/index.html')
+    return redirect('petconnect:index')
 
 
 def cadastro(request):
@@ -46,6 +48,26 @@ def cadastro(request):
         else:
             context['error'] = 'Senhas não conferem'
     return render(request, 'petconnect/cadastro.html', context)
+
+
+@login_required(login_url='petconnect:login')
+def perfil_usuario(request):
+    return render(request, 'petconnect/perfil_usuario.html')
+
+
+@login_required(login_url='petconnect:login')
+def cadastro_animal(request):
+    if request.method == 'POST':
+        nome = request.POST['nome']
+        idade = request.POST['idade']
+        especie = request.POST['especie']
+        raca = request.POST['raca']
+        sexo = request.POST['sexo']
+        animal = Animais.objects.create(dono=request.user, nome=nome, idade=idade, especie=especie, raca=raca, sexo=sexo)
+        animal.save()
+        print(json.dumps(request.POST))
+        return redirect('petconnect:perfil_usuario')
+    return render(request, 'petconnect/cadastro_animal.html')
 
 
 def contato(request):

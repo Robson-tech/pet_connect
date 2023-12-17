@@ -1,0 +1,57 @@
+{% extends 'petconnect/base.html' %}
+
+{% load static %}
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'css/cadastro_animal.css' %}">
+{% endblock %}
+
+{% block content %}
+<main>
+    <h1>Cadastre seu Pet!</h1>
+    <div id="formulario">
+        <form action="{% url 'petconnect:cadastro_animal' %}" method="post">
+            {% csrf_token %}
+            <label>Nome do Pet</label>
+            <input type="text" name="nome">
+            <label>Idade</label>
+            <input type="text" name="idade">
+            <label>Espécie</label>
+            <select name="especie">
+                <option value="gato">Gato</option>
+                <option value="cachorro" selected>Cachorro</option>
+                <option value="cavalo">Cavalo</option>
+            </select>
+            <label>Raça</label>
+            <input type="text" name="raca">
+            <fieldset>
+                <legend>Gênero:</legend>
+
+                <div>
+                  <input type="radio" id="F" name="sexo" value="F" checked />
+                  <label for="F">Fêmea</label>
+                </div>
+
+                <div>
+                  <input type="radio" id="M" name="sexo" value="M" />
+                  <label for="M">Macho</label>
+                </div>
+            </fieldset>
+            <label>Observações</label>
+            <input type="text" name="obs">
+
+            <div>
+                <input
+                  type="checkbox"
+                  id="subscribeNews"
+                  name="subscribe"
+                  value="newsletter" />
+                <label for="subscribeNews">Concordo com os <a href="#">Termos de Uso</a></label>
+            </div>
+
+            <a href="#"><input type="button" value="Voltar" class="botao" id="botao1"></a>
+            <input type="submit" name="enviar" value="Concluir" class="botao"> 
+        </form>
+    </div>
+</main>
+{% endblock %}

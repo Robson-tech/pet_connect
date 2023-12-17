@@ -13,8 +13,3 @@ class CustomUserChangeForm(UserChangeForm):
     class Meta:
         model = Usuario
         fields = ('first_name', 'last_name', 'email', 'cpf', 'telefone')
-
-
-class LoginUsuarioForm(forms.Form):
-    email = forms.EmailField(label='Email')
-    password = forms.CharField(label='Senha', widget=forms.PasswordInput)
