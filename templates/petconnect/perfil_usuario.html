@@ -9,7 +9,7 @@
 {% block header %}
 <header>
     <img src="{% static 'img/logo.png' %}" alt="">
-    <button><a href="/index.html">SAIR</a></button>
+    <button><a href="{% url 'petconnect:logout' %}">SAIR</a></button>
 </header>
 {% endblock %}
 
@@ -17,7 +17,7 @@
 <aside>
     <div id="conteudo">
         <div class="circulo"></div>
-        <h2>Nome Sobrenome</h2>
+        <h2>{{ user.first_name }} {{ user.last_name }}</h2>
 
         <div id="botoes">
             <button><a href="{% url 'petconnect:index' %}">HOME</a></button>
@@ -30,10 +30,12 @@
 
 <main>
     <div id="conteudo-principal">
-        <button>Consultas Agendadas</button>
-        <button>Consultas Anteriores</button>
-        <button>Agendamentos Pendentes</button>
+        <button><a href="{% url 'petconnect:consultas_agendadas' %}">Consultas Agendadas</a></button>
+        <button><a href="{% url 'petconnect:consultas_anteriores' %}">Consultas Anteriores</a></button>
+        <button><a href="{% url 'petconnect:consultas_pendentes' %}">Agendamentos Pendentes</a></button>
     </div>
+    {% block content_perfil %}
+    {% endblock %}
 </main>
 {% endblock %}
 

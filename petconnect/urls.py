@@ -10,6 +10,9 @@ urlpatterns = [
     path('cadastro/', views.cadastro, name='cadastro'),
     path('perfil_usuario/', views.perfil_usuario, name='perfil_usuario'),
     path('cadastro_animal/', views.cadastro_animal, name='cadastro_animal'),
+    path('consultas/agendadas', views.consultas_agendadas, name='consultas_agendadas'),
+    path('consultas/anteriores', views.consultas_anteriores, name='consultas_anteriores'),
+    path('consultas/pendentes', views.consultas_pendentes, name='consultas_pendentes'),
     path('contato/', views.contato, name='contato'),
     path('sobre/', views.sobre, name='sobre'),
 ]

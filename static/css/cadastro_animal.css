@@ -102,3 +102,88 @@ nav > ul > li:hover {
   transform: scale(1.1);
   transition: 1s;
 }
+
+h1 {
+  color: #f4b706;
+  text-align: center;
+  margin: 30px;
+}
+
+#formulario {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.forms > label {
+  margin-left: 30px;
+  font-size: 20px;
+  opacity: 0.7;
+}
+
+.forms > input,
+.forms > select {
+  width: 300px;
+  height: 35px;
+  background: #ebeaea;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  border: none;
+  margin-top: 20px;
+  margin-left: 5px;
+  margin-bottom: 20px;
+  padding-left: 10px;
+  outline: 0;
+}
+
+fieldset {
+  width: 80%;
+  padding: 10px;
+  margin-left: 30px;
+  margin-bottom: 20px;
+  border: #8600c6 2px solid;
+}
+
+#observacoes > input {
+  width: 70%;
+  height: 100px;
+}
+
+.termos {
+  margin-top: 30px;
+  margin-left: 30px;
+  margin-bottom: 10px;
+}
+
+.botao,
+.botao > input {
+  width: 130px;
+  height: 36px;
+  font-size: 20px;
+  background-color: #f4b706;
+  color: #fff;
+  display: inline-block;
+  margin-top: 30px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 20px;
+  text-decoration: none;
+  margin-bottom: 25px;
+}
+
+#botao1 {
+  border: none;
+}
+
+.botoes {
+  width: 30%;
+  margin: 0 auto;
+  display: flex;
+}
+
+.botao:hover,
+.botao > input:hover {
+  background-color: #d6a101;
+  transform: scale(1.1);
+  transition: 1s;
+  cursor: pointer;
+}

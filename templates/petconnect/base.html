@@ -14,16 +14,18 @@
     {% block header %}
     <header>
         <h1>Bem Vindo {% if user.is_authenticated %}{{ user.first_name }}{% else %}Visitante{% endif %}</h1>
-        <img src="{% static 'img/logo.png' %}" alt="Logo do PetConnect">
-        <button>
-            <a href="{% url 'petconnect:login' %}">Área Logada</a>
-            <div id="triangulo-para-baixo"></div>
-        </button>
-        {% if user.is_authenticated %}
-        <button>
-            <a href="{% url 'petconnect:logout' %}">Sair</a>
-        </button>
-        {% endif %}
+        <a href="{% url 'petconnect:index' %}"><img src="{% static 'img/logo.png' %}" alt="Logo do PetConnect"></a>
+        <div class="header__auth-area">
+            <button>
+                <a href="{% url 'petconnect:login' %}">Área Logada</a>
+                <div id="triangulo-para-baixo"></div>
+            </button>
+            {% if user.is_authenticated %}
+            <button>
+                <a href="{% url 'petconnect:logout' %}">Sair</a>
+            </button>
+            {% endif %}
+        </div>
     </header>
     <nav>
         <ul>
@@ -32,6 +34,7 @@
             <li><img src="{% static 'img/crown.png' %}" alt=""><a href="{% url 'petconnect:cadastro' %}">CADASTRO</a></li>
             <li><img src="{% static 'img/star.png' %}" alt=""><a href="#">AVALIAÇÕES</a></li>
             <li><img src="{% static 'img/phone_call.png' %}" alt=""><a href="{% url 'petconnect:contato' %}">CONTATO</a></li>
+            <li><img src="{% static 'img/profile_user1.png' %}" alt=""><a href="{% url 'petconnect:perfil_usuario' %}">PERFIL USUÁRIO</a></li>
         </ul>
     </nav>
     {% endblock %}

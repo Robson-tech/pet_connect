@@ -135,14 +135,18 @@ main {
 
 #conteudo-principal button {
   background-color: #8600c6;
-  color: #fff;
   font-weight: bold;
   border: none;
   border-radius: 10px;
   padding: 10px;
-  margin: 10px;
-  width: 300px;
+  margin: 13px;
+  width: 310px;
   box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.25);
+}
+
+#conteudo-principal button a {
+  color: #fff;
+  text-decoration: none;
 }
 
 #conteudo-principal button:hover {
@@ -150,4 +154,73 @@ main {
   transform: scale(1.1);
   transition: 1s;
   cursor: pointer;
+}
+
+section {
+  width: 100%;
+}
+
+.consulta,
+.animais-card {
+  width: 300px;
+  height: 300px;
+  border: #8600c6 2px solid;
+  margin: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.25);
+  display: inline-block;
+}
+
+.consulta:hover,
+.animais-card:hover {
+  transform: scale(1.1);
+  transition: 1s;
+}
+
+.consulta-agendada {
+  margin-left: 20px;
+}
+
+.animais-card {
+  text-align: center;
+  color: #8600c6;
+}
+
+.animais-card h2 {
+  padding-top: 10px;
+}
+
+.animais-card h3 {
+  padding-bottom: 10px;
+}
+
+.animais-card button {
+  background-color: #f4b706;
+  color: #fff;
+  font-weight: bold;
+  margin: 10px;
+  width: 100px;
+  height: 20px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.25);
+}
+
+.animais-card button:hover {
+  background-color: #d6a101;
+  transform: scale(1.1);
+  transition: 1s;
+  cursor: pointer;
+}
+
+.circulo2 {
+  border: #f4b706 2px solid;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  margin: 20px auto;
+}
+
+#animais-cadastro {
+  text-align: center;
 }

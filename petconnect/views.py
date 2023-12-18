@@ -65,9 +65,23 @@ def cadastro_animal(request):
         sexo = request.POST['sexo']
         animal = Animais.objects.create(dono=request.user, nome=nome, idade=idade, especie=especie, raca=raca, sexo=sexo)
         animal.save()
-        print(json.dumps(request.POST))
         return redirect('petconnect:perfil_usuario')
     return render(request, 'petconnect/cadastro_animal.html')
+
+
+@login_required(login_url='petconnect:login')
+def consultas_agendadas(request):
+    return render(request, 'petconnect/agendamento/agendadas.html')
+
+
+@login_required(login_url='petconnect:login')
+def consultas_anteriores(request):
+    return render(request, 'petconnect/agendamento/anteriores.html')
+
+
+@login_required(login_url='petconnect:login')
+def consultas_pendentes(request):
+    return render(request, 'petconnect/agendamento/pendentes.html')
 
 
 def contato(request):
