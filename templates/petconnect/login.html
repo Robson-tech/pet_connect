@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetConnect</title>
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+</head>
+<body>
+    <div id="conteiner1" class="conteiner">
+        <div id="conteiner-casa">    
+            <svg xmlns="http://www.w3.org/2000/svg" width="833" height="1024" viewBox="0 0 833 1024" fill="none">
+                <path d="M0 0H833L487.074 510L833 1024H0V0Z" fill="#8600C6"/>
+            </svg>
+        </div>
+        <div id="casa"><img src="{% static 'img/casa.png' %}" alt=""></div>
+    </div>
+
+
+    <div id="conteiner2" class="conteiner">
+        <div id="conteiner-child">
+            <h2>USER LOGIN</h2>
+            <form action="{% url 'petconnect:login' %}" method="post">
+                {% csrf_token %}
+                <div class="formulario-input">
+                    <input id="username" type="text" name="email" placeholder="    Insira seu E-mail">
+                </div>
+                <div class="formulario-input">
+                    <input id="senha" type="password" name="senha" placeholder="    Insira sua senha">
+                    <p><a href="#">Esqueceu a senha?</a></p>
+                </div>
+                <input type="submit" value="ENTRAR" id="botao">
+            </form>
+            <p id="nao-possui">Não possui uma conta? <a href="#">Clique aqui!</a></p>
+
+            <div id="linha-conteiner">
+                <div class="linha"></div><p>OU</p><div class="linha"></div>
+            </div>
+
+            <div id="redes-sociais">
+                <img src="{% static 'img/twitter.png' %}" alt="">
+                <img src="{% static 'img/facebook.png' %}" alt="">
+                <img src="{% static 'img/instagram.png' %}" alt="">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

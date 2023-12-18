@@ -1,0 +1,105 @@
+{% extends 'petconnect/base.html' %}
+
+{% load static %}
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'css/sobre.css' %}">
+{% endblock %}
+
+{% block content %}
+<section id="Banner1">
+    <div class="banner">
+        <div>
+            <h1>Conheça mais sobre nós</h1>
+            <p>Somos apaixonados por proporcionar o melhor cuidado possível para os seus companheiros peludos, e nossa missão é criar um ambiente onde eles se sintam amados, seguros e felizes.</p>
+            <button>SAIBA MAIS</button>
+        </div>
+        <div><img src="{% static 'img/cachorro_gato.png' %}" alt="" id="img-banner1"></div>
+    </div>
+</section>
+
+<section id="Nossa-Missao">
+    <img src="#" alt=""> <h2>Nossa Missão</h2>
+    <p>Na essência do [Nome do PetShop], está a missão de proporcionar uma vida mais saudável e feliz para os animais de estimação, enquanto facilitamos a jornada de seus tutores. Acreditamos que todos os pets merecem o melhor em termos de cuidados, alimentação e amor, e estamos comprometidos em oferecer exatamente isso.</p>
+</section>
+
+<section id="Nossa-Equipe">
+    <img src="#" alt=""> <h2>Nossa Equipe</h2>
+    <div id="equipe">
+        <div class="equipe-nome">
+            <div class="circulo"></div>
+            <h2>Nome</h2>
+            <h3>Cargo</h3>
+        </div>
+
+        <div class="equipe-nome">
+            <div class="circulo"></div>
+            <h2>Nome</h2>
+            <h3>Cargo</h3>
+        </div>
+
+        <div class="equipe-nome">
+            <div class="circulo"></div>
+            <h2>Nome</h2>
+            <h3>Cargo</h3>
+        </div>
+
+        <div class="equipe-nome">
+            <div class="circulo"></div>
+            <h2>Nome</h2>
+            <h3>Cargo</h3>
+        </div>
+
+        <div class="equipe-nome">
+            <div class="circulo"></div>
+            <h2>Nome</h2>
+            <h3>Cargo</h3>
+        </div>
+    </div>
+</section>
+
+<section id="vantagens">
+    <h3>Principais vantagens de ser um credenciado</h3>
+    <div>
+        <img src="#" alt="">
+        <h4>Descontos Exclusivos</h4>
+        <p>Isso permite economizar enquanto oferece o melhor para seus animais de estimação</p>
+    </div>
+
+    <div>
+        <img src="#" alt="">
+        <h4>Agendamento Simplificado</h4>
+        <p>Gerencie facilmente seus horários e consultas online, economizando tempo e esforço.</p>
+    </div>
+
+    <div>
+        <img src="#" alt="">
+        <h4>Atendimento Personalizado</h4>
+        <p>Estamos aqui para fornecer orientação, esclarecer dúvidas e garantir uma experiência de compra suave.</p>
+    </div>
+
+    <div>
+        <img src="#" alt="">
+        <h4>Credibilidade e Confiança</h4>
+        <p>as avaliações de outros clientes contribuem para construir confiança, mostrando que você somos um parceiro confiável</p>
+    </div>
+
+    <div>
+        <img src="#" alt="">
+        <h4>Processo ágil e sem burocracia</h4>
+        <p>Faça parte de uma comunidade dedicada a promover o bem-estar dos animais de estimação.</p>
+    </div>
+</section>
+
+<section id="perguntas-frequentes">
+
+</section>
+
+<section id="mais-duvidas">
+    <div>
+        <img src="#" alt="">
+        <h2>Para mais informações, acesse a nossa seção de contato.</h2>
+        <button>contato</button>
+    </div>
+</section>
+{% endblock %}

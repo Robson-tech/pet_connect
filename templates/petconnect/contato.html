@@ -1,0 +1,73 @@
+{% extends 'petconnect/base.html' %}
+
+{% load static %}
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'css/contato.css' %}">
+{% endblock %}
+
+{% block content %}
+<section id="Banner1">
+    <div class="banner">
+        <div>
+            <h1>Entre em contato com a gente</h1>
+            <p>Estamos aqui para ajudar e responder a todas as suas perguntas relacionadas aos nossos produtos, serviços e cuidados com animais de estimação.</p>
+            <button>SAIBA MAIS</button>
+        </div>
+        <div><img src="{% static 'img/cachorro_gato.png' %}" alt="" id="img-banner1"></div>
+    </div>
+</section>
+
+<div id="Banner2">
+    <div>
+        <h2>Informações de Contato</h2>
+        <p>
+            Telefone: <b>[Inserir número de telefone]</b> <br>
+            E-mail: <b>[Inserir endereço de e-mail]</b> <br>
+            Endereço da Loja: <b>[Inserir endereço físico, se aplicável]</b> <br>
+        </p>
+    </div>
+
+    <div>
+        <h2>Horário de Funcionamento</h2>
+        <p>
+            Segunda a Sexta: <b>[Inserir horário de abertura e fechamento]</b> <br>
+            Sábado e Domingo: <b>[Inserir horário de abertura e fechamento]</b>
+        </p>
+    </div>
+</div>
+
+<section id="como-chegar">
+    <img src="{% static 'img/pawprint.png' %}" alt=""> <h1>COMO CHEGAR?</h1>
+
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.4099527965836!2d-41.47228713100084!3d-7.0783794537172895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x79c113670c147b5%3A0x80dce5eb74375e04!2sEspa%C3%A7o%20Pet!5e0!3m2!1sen!2sbr!4v1702057313345!5m2!1sen!2sbr" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+</section>
+
+<h2 id="titulo">Nos mande uma mensagem</h2>
+<section id="mandar-mensagem">
+    <div id="mandar-mensagem2">
+        <div>
+            <label for="username">Nome Completo <abbr title="required"></abbr></label>
+            <input id="username" type="text" name="username" placeholder="Seu nome completo">
+        </div>
+        <div>
+            <label for="email">Email <abbr title="required"></abbr></label>
+            <input id="email" type="email" name="email" placeholder="Email para contato">
+        </div>
+        <div>
+            <label for="mensagem">Mensagem<img src="#" alt=""> <abbr title="required"></abbr></label>
+            <input id="mensagem" type="text" name="mensagem">
+        </div>
+        <input id="botao" type="button" value="ENVIAR">
+    </div>
+</section>
+
+<section id="mais-duvidas">
+    <div>
+        <img src="#" alt="">
+        <h2>Para mais informações, acesse a nossa seção de contato.</h2>
+        <button>contato</button>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,44 @@
+{% extends 'petconnect/base.html' %}
+
+{% load static %}
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'css/cadastro.css' %}" />
+{% endblock %}
+
+{% block header %}
+<header>
+  <div id="img_container">
+    <img src="{% static 'img/casa.png' %}" alt="usuario" />
+  </div>
+</header>
+{% endblock %}
+
+{% block content %}
+<main>
+  <h1>Crie sua conta!</h1>
+  <div id="formulario">
+    <form action="{% url 'petconnect:cadastro' %}" method="post">
+      {% csrf_token %}
+      <input type="text" name="nome" placeholder="Nome" />
+      <input type="text" name="sobrenome" placeholder="Sobrenome" />
+      <input type="e-mail" name="email" placeholder="E-mail" />
+      <input type="text" name="cpf" placeholder="CPF" />
+      <input type="text" name="telefone" placeholder="Telefone" />
+      <input type="password" name="senha1" placeholder="Senha" />
+      <input type="password" name="senha2" placeholder="Confirmar Senha" />
+      <a href="{% url 'petconnect:index' %}">
+        <input type="button" value="Voltar" class="botao" id="botao1"/>
+      </a>
+      <input type="submit" name="enviar" value="Concluir" class="botao" />
+    </form>
+  </div>
+  {% if error %}
+  <div class="mensagem">
+    <p>{{ error }}</p>
+  </div>
+  {% endif %}
+</main>
+{% endblock %}
+
+{% block footer %}{% endblock %}
