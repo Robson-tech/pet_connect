@@ -24,18 +24,23 @@
         <h1>Cadastre seu Pet!</h1>
         <div id="formulario">
             <form action="enviar_dadosPet.py">
-                <label>Nome do Pet</label>
-                <input type="text" name="nome">
-                <label>Data de Nascimento</label>
-                <input type="text" name="dataNasc">
-                <label>Espécie</label>
-                <select name="select">
+                <div class="forms">
+                  <label>Nome: </label>
+                  <input type="text" name="nome">
+                  <label>Idade: </label>
+                  <input type="text" name="dataNasc">
+                </div>
+  
+                <div class="forms">
+                  <label>Espécie: </label>
+                  <select name="select">
                     <option value="valor1">Gato</option>
                     <option value="valor2" selected>Cachorro</option>
                     <option value="valor3">Cavalo</option>
-                </select>
-                <label>Raça</label>
-                <input type="text" name="raça">
+                  </select>
+                  <label>Raça: </label>
+                  <input type="text" name="raça">
+                </div>
                 <fieldset>
                     <legend>Gênero:</legend>
                   
@@ -49,10 +54,12 @@
                       <label for="dewey">Macho</label>
                     </div>
                   </fieldset>
-                <label>Observações</label>
-                <input type="text" name="Observações">
+                <div class="forms" id="observacoes">
+                  <label>Observações: </label>
+                  <input type="text" name="Observações">
+                </div>
 
-                <div>
+                <div class="termos">
                     <input
                       type="checkbox"
                       id="subscribeNews"
@@ -61,8 +68,10 @@
                     <label for="subscribeNews">Concordo com os <a href="#">Termos de Uso</a></label>
                   </div>
 
-                <a href="/index.html"><input type="button" value="Voltar" class="botao" id="botao1"></a>
-                <input type="submit" name="enviar" value="Concluir" class="botao"> 
+                <div class="botoes">
+                  <a href="/src/animais-cadastrados.html"><input type="button" value="Voltar" class="botao" id="botao1"></a>
+                  <input type="submit" name="enviar" value="Concluir" class="botao">
+                </div> 
             </form>
         </div>
     </main>
