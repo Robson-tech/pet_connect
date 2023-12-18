@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css2?family=Blinker&family=Nunito&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Nunito;
+}
+
+body{
+    background-color: #F5F3F3;
+}
+
+body::-webkit-scrollbar {
+    width: 12px;
+}
+  
+body::-webkit-scrollbar-track {
+    background: #8600C6;        
+}
+  
+body::-webkit-scrollbar-thumb {
+    background-color: #F4B706; 
+    border-radius: 20px;       
+    border: 3px solid #8600C6;  
+}
+
+header{
+    background-color: #8600C6;
+    padding: 10px;
+    text-align: center;
+}
+
+header > img{
+    padding-left: 140px;
+}
+
+header > button{
+    background-color: #F4B706;
+    color: #fff;
+    padding-top: 5px;
+    padding-left: 20px;
+    padding-bottom: 5px;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.25);
+    float: right;
+    margin-top: 40px;
+    margin-right: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+#triangulo-para-baixo {
+    width: 0; 
+    height: 0; 
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid #fff;
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+header > button:hover{
+    background-color: #d6a101;
+    transform: scale(1.1);
+    transition: 1s;
+    cursor: pointer;
+}
+
+nav{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 500;
+}
+
+nav > ul > li{
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 3px;
+    background-color: #8600C6;
+    border-radius: 5px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+nav > ul > li > img{
+    padding-top: 5px;
+    padding-left: 10px;
+    width: 15px;
+}
+
+nav > ul > li > a{
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+    padding: 10px;
+}
+
+nav > ul > li:hover{
+    background-color: #7201a7;
+    transform: scale(1.1);
+    transition: 1s;
+}
+
+#Banner1{
+    width: 98vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: #8600C6;
+}
+
+.banner{
+    background-color: #EAEAEA;
+    width: 70%;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    display: flex;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.banner > div{
+    width: 50%;
+    text-align: center;
+    padding-left: 2em;
+}
+
+.banner > div > h1{
+    margin-top: 50px;
+    color: #8600C6;
+    padding: 10px;
+}
+
+.banner > div > p{
+    padding-bottom: 1.3em;
+}
+
+.banner > div > button{
+    background-color: #F4B706;
+    color: #fff;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.banner > div > button:hover{
+    background-color: #d6a101;
+    transform: scale(1.1);
+    transition: 1s;
+    cursor: pointer ;
+}
+
+#img-banner1{
+    width: 80%;
+    margin-top: 20px;
+}
+
+#Nossa-Missao{
+    width: 90%;
+    background-color: #8600C6;
+    color: #fff;
+    padding-top: 80px;
+    padding-left: 135px;
+    padding-bottom: 90px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+#Nossa-Missao p{
+    width: 80%;
+}
+
+#Nossa-Missao h2{
+    padding-bottom: 20px;
+}
+
+#Nossa-Equipe{
+    width: 70%;
+    margin: 100px auto;
+}
+
+#equipe{
+    padding: 20px;
+    margin: 0 auto;
+    display: flex;
+}
+
+#equipe h2, #Nossa-Equipe h2{
+    text-align: center;
+    color: #8600C6;
+}
+
+#equipe h3{
+    text-align: center;
+    font-weight: lighter;
+    color: #8600C6;
+}
+
+.equipe-nome{
+    margin: 20px;
+}
+
+.circulo {
+    background: lightblue;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+
+#vantagens{
+    width: 80%;
+    margin: 50px auto;
+    color: #8600C6;
+}
+
+#vantagens h3{
+    text-align: center;
+    background-color: #F4B706;
+    color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    width: 50%;
+    margin: 20px auto;
+}
+
+#vantagens div{
+    padding: 20px;
+    text-align: center;
+}
+
+.linha{
+    display: flex;
+    flex-direction: row;
+}
+
+.colunas{
+    width: 50%;
+}
+
+
+#mais-duvidas{
+    width: 70%;
+    margin: 100px auto;
+    border: #8600C6 solid 1px;
+    border-radius: 10px;
+    padding: 40px;
+}
+
+#mais-duvidas div{
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+}
+
+#mais-duvidas h2{
+    margin-left:  40px;
+    margin-right: 40px;
+}
+
+#mais-duvidas button{
+    background-color: #8600C6;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    width: 170px;
+    height: 40px;
+    border-radius: 30px;
+    margin-left: 20px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+#mais-duvidas button:hover{
+    background-color: #7201a7;
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: 1s;
+}
+
+footer{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-left: 20px;
+}
+
+footer > section{
+    background-color: #8600C6;
+    padding: 20px;
+    margin: 30px;
+    color: #fff;
+    border-radius: 5px;
+    text-align: center;
+}
+
+footer > section > h3{
+    margin-bottom: 10px;
+}
+
+footer > div{
+    margin: 30px;
+    color: #8600C6;
+}
+
+footer > div > ul{
+    list-style: none;
+    margin: 10px;
+}
+
+#section2{
+    width: 45%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -50px;
+    color: #8600C6;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+#section2 > div{
+    margin-left: 20px;
+}
+
+#section2 > div > img{
+    margin-top: 20px;
+}
+
+#the-end{
+    margin-top: 20px;
+    background-color: #8600C6;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}

@@ -4,19 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PetConnect</title>
+    <link rel="stylesheet" href="/styles/contato.css">
 </head>
 <body>
     <header>
-        <img src="Group 54.png" alt="">
-        <button>Área Logada <div id="triangulo-para-baixo"></div></button>
+        <img src="/assets/Group 54.png" alt="">
+        <button>Área Logada <div id="triangulo-para-baixo"></div><a href="login.html"></a></button>
     </header>
     <nav>
         <ul>
-            <li><img src="question-sign-in-circles 1.png" alt=""><a href="#">SOBE NÓS</a></li>
-            <li><img src="medal 1.png" alt=""><a href="#">SERVIÇOS</a></li>
-            <li><img src="crown (1) 1.png" alt=""><a href="#">CADASTRO</a></li>
-            <li><img src="star 1.png" alt=""><a href="#">AVALIAÇÕES</a></li>
-            <li><img src="phone-call 1.png" alt=""><a href="#">CONTATO</a></li>
+            <li><img src="/assets/question-sign-in-circles 1.png" alt=""><a href="sobre-nós.html">SOBRE NÓS</a></li>
+            <li><img src="/assets/medal 1.png" alt=""><a href="#">SERVIÇOS</a></li>
+            <li><img src="/assets/crown (1) 1.png" alt=""><a href="cadastro.html">CADASTRO</a></li>
+            <li><img src="/assets/star 1.png" alt=""><a href="#">AVALIAÇÕES</a></li>
+            <li><img src="/assets/phone-call 1.png" alt=""><a href="contato.html">CONTATO</a></li>
         </ul>
     </nav>
 
@@ -27,58 +28,60 @@
                 <p>Estamos aqui para ajudar e responder a todas as suas perguntas relacionadas aos nossos produtos, serviços e cuidados com animais de estimação.</p>
                 <button>SAIBA MAIS</button>
             </div>
-            <div><img src="Group 7 (1).png" alt="" id="img-banner1"></div>
+            <div><img src="/assets/Group 7 (1).png" alt="" id="img-banner1"></div>
         </div>
     </section>
 
-    <section id="Banner2">
+    <div id="Banner2">
         <div>
             <h2>Informações de Contato</h2>
             <p>
-                Telefone: [Inserir número de telefone]
-                E-mail: [Inserir endereço de e-mail]
-                Endereço da Loja: [Inserir endereço físico, se aplicável]
+                Telefone: <b>[Inserir número de telefone]</b> <br>
+                E-mail: <b>[Inserir endereço de e-mail]</b> <br>
+                Endereço da Loja: <b>[Inserir endereço físico, se aplicável]</b> <br>
             </p>
         </div>
 
         <div>
             <h2>Horário de Funcionamento</h2>
             <p>
-                Segunda a Sexta: [Inserir horário de abertura e fechamento]
-                Sábado e Domingo: [Inserir horário de abertura e fechamento]
+                Segunda a Sexta: <b>[Inserir horário de abertura e fechamento]</b> <br>
+                Sábado e Domingo: <b>[Inserir horário de abertura e fechamento]</b>
             </p>
         </div>
-    </section>
+    </div>
 
     <section id="como-chegar">
-        <img src="#" alt=""> <h2>COMO CHEGAR?</h2>
+        <img src="/assets/pawprint (3) 1.png" alt=""> <h1>COMO CHEGAR?</h1>
 
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.4099527965836!2d-41.47228713100084!3d-7.0783794537172895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x79c113670c147b5%3A0x80dce5eb74375e04!2sEspa%C3%A7o%20Pet!5e0!3m2!1sen!2sbr!4v1702057313345!5m2!1sen!2sbr" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
     </section>
 
+    <h2 id="titulo">Nos mande uma mensagem</h2>
     <section id="mandar-mensagem">
-        <div>
+        <div id="mandar-mensagem2">
             <div>
-                <label for="username">Nome: <img src="#" alt=""> <abbr title="required"></abbr></label>
-                <input id="username" type="text" name="username">
+                <label for="username">Nome Completo <abbr title="required"></abbr></label>
+                <input id="username" type="text" name="username" placeholder="Seu nome completo">
             </div>
             <div>
-                <label for="email">Email <img src="#" alt=""> <abbr title="required"></abbr></label>
-                <input id="email" type="email" name="email">
+                <label for="email">Email <abbr title="required"></abbr></label>
+                <input id="email" type="email" name="email" placeholder="Email para contato">
             </div>
             <div>
                 <label for="mensagem">Mensagem<img src="#" alt=""> <abbr title="required"></abbr></label>
                 <input id="mensagem" type="text" name="mensagem">
             </div>
-            <input type="button" value="ENTRAR">
+            <input id="botao" type="button" value="ENVIAR">
         </div>
     </section>
 
     <section id="mais-duvidas">
         <div>
-            <img src="#" alt="">
-            <h2>Para mais informações, acesse a nossa seção de contato.</h2>
-            <button>contato</button>
+            <img src="/assets/image 21.png" alt="">
+            <h2>Para mais informações, acesse a nossa seção <br> de perguntas frequentes.</h2>
+            <button>Perguntas Frequentes</button>
         </div>
     </section>
 
@@ -115,14 +118,14 @@
     <div id="section2">
         <div>
             <h3>Onde Estamos</h3>
-            <img src="image 8.png" alt="">
-            <img src="image 9.png" alt="">
-            <img src="image 10.png" alt="">
-            <img src="image 11.png" alt="">
+            <img src="/assets/image 8.png" alt="">
+            <img src="/assets/image 9.png" alt="">
+            <img src="/assets/image 10.png" alt="">
+            <img src="/assets/image 11.png" alt="">
         </div>
         <div>
             <h3>Baixe o App</h3>
-            <img src="image 12.png" alt="">
+            <img src="/assets/image 12.png" alt="">
         </div>
     </div>
     <section id="the-end"><p>© PetConnect - 2023</p></section>
