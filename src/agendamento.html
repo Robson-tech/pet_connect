@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetConnect</title>
+    <link rel="stylesheet" href="/styles/agendamento.css">
+</head>
+<body>
+    <header>
+        <div id="img_container">
+            <img src="/assets/CASA.png" alt="usuario">
+        </div>
+    </header>
+    <main>
+        <h1>Realize seu agendamento!</h1>
+        <div id="formulario">
+            <form action="enviar_dados.py">
+                <input type="text" name="Data/Horário" placeholder="Data/Horário">
+                <select id=servicos>
+                    <option>Selecione o serviço</option>
+                    <option>Banho/Tosa</option>
+                    <option>Consulta</option>
+                    <option>Cirurgia</option>
+                </select>
+                <select id=animais>
+                    <option>Selecione o animal</option>
+                    <option>Gato</option>
+                    <option>Cachorro</option>
+                    <option>Cavalo</option>
+                </select>
+                <input type="text" name="descrição" placeholder="Descrição">
+                <a href="/index.html"><input type="button" value="Voltar" class="botao" id="botao1"></a>
+                <input type="submit" name="enviar" value="Concluir" class="botao"> 
+            </form>
+        </div>
+    </main>
+</body>
+</html>

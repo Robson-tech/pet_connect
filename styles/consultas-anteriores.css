@@ -1,0 +1,30 @@
+.agendamento-data{
+    padding: 5px;
+    color: #fff;
+    background-color: #8600C6;
+    text-align: center;
+}
+
+.info-consulta, .info-animal{
+    margin: 15px;
+}
+
+.botao-card{
+    width: 100px;
+    font-weight: bold;
+    margin: 0 auto;
+    display: block;
+    border-radius: 10px;
+    border: none;
+    background-color: #F4B706;
+    color: #fff;
+    padding: 3px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.botao-card:hover{
+    background-color: #e6ad02;
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: 1s;
+}
