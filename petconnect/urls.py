@@ -13,6 +13,7 @@ urlpatterns = [
     path('consultas/agendadas', views.consultas_agendadas, name='consultas_agendadas'),
     path('consultas/anteriores', views.consultas_anteriores, name='consultas_anteriores'),
     path('consultas/pendentes', views.consultas_pendentes, name='consultas_pendentes'),
+    path('agendar/', views.agendar_consulta, name='agendar_consulta'),
     path('contato/', views.contato, name='contato'),
     path('sobre/', views.sobre, name='sobre'),
 ]

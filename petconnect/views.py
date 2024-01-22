@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 import json
-from .models import Usuario, Animais
+from .models import Usuario, Animais, Servico, Agendamento
 
 
 def index(request):
@@ -71,7 +71,9 @@ def cadastro_animal(request):
 
 @login_required(login_url='petconnect:login')
 def consultas_agendadas(request):
-    return render(request, 'petconnect/agendamento/agendadas.html')
+    context = {}
+    agendamentos = Agendamento.objects.filter(id_usuario=request.user)
+    return render(request, 'petconnect/agendamento/agendadas.html', context)
 
 
 @login_required(login_url='petconnect:login')
@@ -82,6 +84,16 @@ def consultas_anteriores(request):
 @login_required(login_url='petconnect:login')
 def consultas_pendentes(request):
     return render(request, 'petconnect/agendamento/pendentes.html')
+
+
+@login_required(login_url='petconnect:login')
+def agendar_consulta(request):
+    context = {}
+    servicos = Servico.objects.all()
+    animais = Animais.objects.filter(dono=request.user)
+    context['animais'] = animais
+    context['servicos'] = servicos
+    return render(request, 'petconnect/agendamento/agendar.html', context)
 
 
 def contato(request):

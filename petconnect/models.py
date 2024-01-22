@@ -33,11 +33,11 @@ class Animais(models.Model):
     image = models.ImageField(upload_to='animais_image', blank=True, null=True)
 
     def __str__(self):
-        return self.name
+        return self.nome
     
 
 class Loja(models.Model):
-    name = models.CharField(max_length=100)
+    nome = models.CharField(max_length=100)
     endereco = models.CharField(max_length=100)
     telefone = models.CharField(max_length=20)
     cnpj = models.CharField(max_length=20)
@@ -47,7 +47,7 @@ class Loja(models.Model):
     image = models.ImageField(upload_to='pet_image', blank=True, default='pet_image/default.png')
 
     def __str__(self):
-        return self.name
+        return self.nome
     
     
 class Promocoes(models.Model):
@@ -66,10 +66,9 @@ class Servico(models.Model):
     descricao = models.CharField(max_length=500)
     preco = models.FloatField()
     id_loja = models.ForeignKey(Loja, on_delete=models.CASCADE)
-    id_promocao = models.ForeignKey(Promocoes, on_delete=models.CASCADE, blank=True, null=True)
 
     def __str__(self):
-        return self.name
+        return self.nome
 
 
 class Agendamento(models.Model):
@@ -77,8 +76,8 @@ class Agendamento(models.Model):
     id_usuario = models.ForeignKey(Usuario, on_delete=models.CASCADE)
     id_servico = models.ForeignKey(Servico, on_delete=models.CASCADE)
     id_animal = models.ForeignKey(Animais, on_delete=models.CASCADE)
-    data_hora_agendamento = models.DateTimeField()
-    data_hora_consulta = models.DateTimeField(auto_now_add=True)
+    data_hora_agendamento = models.DateTimeField(auto_now_add=True)
+    data_hora_consulta = models.DateTimeField()
     status = models.BooleanField(default=False)
     desc_problema = models.CharField(max_length=500)
 
