@@ -11,21 +11,21 @@
 <div id="formulario">
     <form action="{% url 'petconnect:agendar_consulta' %}" method="post">
         {% csrf_token %}
-        <input type="datetime" name="datahorario" placeholder="Data/Horário">
-        <select id=servicos>
+        <input type="date" name="datahorario" placeholder="Data/Horário">
+        <select id=servicos name="servico">
             <option>Selecione o serviço</option>
             {% for servico in servicos %}
-            <option>{{ servico.nome }}</option>
+            <option value="{{ servico.id }}">{{ servico.nome }}</option>
             {% endfor %}
         </select>
-        <select id=animais>
+        <select id=animal name="animal">
             <option>Selecione o animal</option>
             {% for animal in animais %}
-            <option>{{ animal.nome }}</option>
+            <option value="{{ animal.id }}">{{ animal.nome }}</option>
             {% endfor %}
         </select>
         <input type="text" name="descricao" placeholder="Descrição">
-        <input type="submit" name="enviar" value="Concluir" class="botao"> 
+        <input type="submit" value="Concluir" class="botao"> 
     </form>
 </div>
 {% endblock %}

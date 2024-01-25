@@ -72,13 +72,17 @@ def cadastro_animal(request):
 @login_required(login_url='petconnect:login')
 def consultas_agendadas(request):
     context = {}
-    agendamentos = Agendamento.objects.filter(id_usuario=request.user)
+    agendamentos = Agendamento.objects.filter(usuario=request.user, status=False)
+    context['agendamentos'] = agendamentos
     return render(request, 'petconnect/agendamento/agendadas.html', context)
 
 
 @login_required(login_url='petconnect:login')
 def consultas_anteriores(request):
-    return render(request, 'petconnect/agendamento/anteriores.html')
+    context = {}
+    agendamentos = Agendamento.objects.filter(usuario=request.user, status=True)
+    context['agendamentos'] = agendamentos
+    return render(request, 'petconnect/agendamento/anteriores.html', context)
 
 
 @login_required(login_url='petconnect:login')
@@ -89,11 +93,21 @@ def consultas_pendentes(request):
 @login_required(login_url='petconnect:login')
 def agendar_consulta(request):
     context = {}
-    servicos = Servico.objects.all()
-    animais = Animais.objects.filter(dono=request.user)
-    context['animais'] = animais
-    context['servicos'] = servicos
-    return render(request, 'petconnect/agendamento/agendar.html', context)
+    if request.method == 'POST':
+        servico_id = request.POST.get('servico', None)
+        animal_id = request.POST.get('animal', None)
+        data_consulta = request.POST.get('datahorario', None)
+        servico = Servico.objects.get(id=servico_id)
+        animal = Animais.objects.get(id=animal_id)
+        if animal and servico and data_consulta:
+            Agendamento.objects.create(usuario=request.user, servico=servico, animal=animal, data_consulta=data_consulta)
+        return redirect('petconnect:consultas_agendadas')
+    else:
+        servicos = Servico.objects.all()
+        animais = Animais.objects.filter(dono=request.user)
+        context['servicos'] = servicos
+        context['animais'] = animais
+        return render(request, 'petconnect/agendamento/agendar.html', context)
 
 
 def contato(request):

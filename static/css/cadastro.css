@@ -10,6 +10,9 @@ body {
 }
 
 header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #8600c6;
   height: 100px;
 }
