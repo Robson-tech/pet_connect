@@ -1,0 +1,41 @@
+.consulta{
+    width: 300px;
+    height: 200px;
+    background-color: #fff;
+    border-radius: 20px;
+    display: inline-block;
+    margin-top: 40px;
+    margin-left: 30px;
+    padding-bottom: 20px;
+}
+
+.agendamento-data{
+    padding: 5px;
+    color: #fff;
+    background-color: #8600C6;
+    text-align: center;
+}
+
+.info-consulta, .info-animal{
+    margin: 15px;
+}
+
+.botao-card2{
+    width: 200px;
+    font-weight: bold;
+    margin: 10px auto;
+    display: block;
+    border-radius: 10px;
+    border: none;
+    background-color: red;
+    color: #fff;
+    padding: 3px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.botao-card2:hover{
+    background-color: rgb(216, 0, 0);
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: 1s;
+}
