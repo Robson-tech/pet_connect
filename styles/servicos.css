@@ -1,0 +1,98 @@
+main{
+    width: 100%;
+}
+
+#divBusca{
+    background-color:#E0EEEE;
+    border:solid 2px #c4c4c4;
+    border-radius:10px;
+    width: 500px;
+    height:32px;
+    margin: 40px auto;
+}
+  
+#txtBusca{
+    float:left;
+    background-color:transparent;
+    padding-left:5px;
+    font-size:18px;
+    border:none;
+    height:32px;
+    width:324px;
+}
+  
+#btnBusca{
+    border:none;
+    float:left;
+    height:32px;
+    border-radius:0 7px 7px 0;
+    width:100px;
+    font-weight:bold;
+    background: #F4B706;
+    color: #fff;
+}
+  
+#divBusca img{
+    float:left;
+}
+
+#cards-servico{
+    width: 85%;
+    margin: 0 auto;
+}
+
+.servico{
+    width: 350px;
+    height: 350px;
+    background-color: #fff;
+    border-radius: 20px;
+    margin: 20px 10px;
+    display: inline-block;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.servico p{
+    padding: 10px;
+}
+
+.servico-capa{
+    width: 350px;
+    height: 200px;
+}
+
+.servico h3{
+    background-color: #8600C6;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+.servico:hover{
+    transform: scale(1.1);
+    transition: 1s;
+}
+
+.botao-card{
+    width: 150px;
+    height: 30px;
+    background-color: #F4B706;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    margin: 10px auto;
+    text-align: center;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.botao-card a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.botao-card:hover{
+    background-color: #e2aa00;
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: 1s;
+}
