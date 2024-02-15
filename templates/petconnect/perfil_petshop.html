@@ -3,29 +3,38 @@
 {% load static %}
 
 {% block style %}
-<link rel="stylesheet" href="{% static 'css/perfil_petshop.css' %}">
+<link rel="stylesheet" href="{% static 'css/perfil_petshop.css' %}" />
 {% endblock %}
 
 {% block content %}
 <div class="header-total">
-    <div class="header">
-        <div id="foto-perfil">
-            <img src="{% static 'img/sample_profile.jpg' %}" alt="foto-perfil">
-        </div>
-        <h4>Nome PetShop</h4>
-        <h6>Picos, Piauí - Endereço</h6>
-
-        <p id="paragrafo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eget ullamcorper ex. Vestibulum ac ligula nec odio rhoncus consequat. Vivamus id condimentum nisl. Aenean congue diam id augue consequat, a pellentesque turpis aliquam. Vestibulum efficitur ullamcorper enim, congue mollis massa convallis non.</p>
-
-        <div id="linha-horizontal"></div>
-        <ul>
-            <li> <a href="servicos-ofertados.html"> Serviços Ofertados </a> </li>
-            <li> <a href="consultas-pendentes.html" > Consultas Pendentes </a> </li>
-            <li> <a href="promocoes-ativas.html"> Promoções Ativas </a> </li>
-            <li> <a href="avaliacoes.html"> Avaliações </a> </li>
-            <li> <a href="configuracao.html" class="botao2" button="botao"> Editar Perfil </a> </li>
-        </ul>
+  <div class="header">
+    <div id="foto-perfil">
+      <img src="{% static 'img/sample_profile.jpg' %}" alt="foto-perfil" />
     </div>
+    <h4>Nome PetShop</h4>
+    <h6>Picos, Piauí - Endereço</h6>
+
+    <p id="paragrafo">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eget
+      ullamcorper ex. Vestibulum ac ligula nec odio rhoncus consequat. Vivamus
+      id condimentum nisl. Aenean congue diam id augue consequat, a pellentesque
+      turpis aliquam. Vestibulum efficitur ullamcorper enim, congue mollis massa
+      convallis non.
+    </p>
+
+    <div id="linha-horizontal"></div>
+    <ul>
+      <li><a href="{% url 'petconnect:consultas_agendadas' %}"> Consultas Pendentes </a></li>
+      <li><a href="{% url 'petconnect:promocoes' %}"> Promoções Ativas </a></li>
+      <li><a href="promocoes-ativas.html"> Avaliações </a></li>
+      <li>
+        <a href="configuracao.html" class="botao2" button="botao">
+          Editar Perfil
+        </a>
+      </li>
+    </ul>
+  </div>
 </div>
 
 <div id="content">

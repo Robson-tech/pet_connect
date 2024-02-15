@@ -1,39 +1,44 @@
-{% extends 'petconnect/base.html' %}
-
-{% load static %}
-
-{% block style %}
-<link rel="stylesheet" href="{% static 'css/perfil_usuario.css' %}">
-{% endblock %}
-
-{% block nav %}
-{% endblock %}
-
-{% block content %}
+{% extends 'petconnect/base.html' %} {% load static %} {% block style %}
+<link rel="stylesheet" href="{% static 'css/perfil_usuario.css' %}" />
+{% endblock %} {% block nav %} {% endblock %} {% block content %}
 <aside>
-    <div id="conteudo">
-        <div class="circulo"></div>
-        <h2>{{ user.first_name }} {{ user.last_name }}</h2>
+  <div id="conteudo">
+    <div class="circulo"></div>
+    <h2>{{ user.first_name }} {{ user.last_name }}</h2>
 
-        <div id="botoes">
-            <button><a href="{% url 'petconnect:index' %}">HOME</a></button>
-            <button><a href="/src/editar-perfil-usuario.html">EDITAR PERFIL</a></button>
-            <button><a href="/src/avaliacoes-usuario.html">AVALIAÇÕES</a></button>
-            <button><a href="{% url 'petconnect:cadastro_animal' %}">ANIMAIS CADASTRADOS</a></button>
-        </div>
+    <div id="botoes">
+      <button><a href="{% url 'petconnect:index' %}">HOME</a></button>
+      <button>
+        <a href="/src/editar-perfil-usuario.html">EDITAR PERFIL</a>
+      </button>
+      <button>
+        <a href="{% url 'petconnect:cadastro_animal' %}">ANIMAIS CADASTRADOS</a>
+      </button>
+      <button>
+        <a href="{% url 'petconnect:agendar_consulta' %}">AGENDAR CONSULTA</a>
+      </button>
     </div>
+  </div>
 </aside>
 
 <main>
-    <div id="conteudo-principal">
-        <button><a href="{% url 'petconnect:consultas_agendadas' %}">Consultas Agendadas</a></button>
-        <button><a href="{% url 'petconnect:consultas_anteriores' %}">Consultas Anteriores</a></button>
-        <button><a href="{% url 'petconnect:consultas_pendentes' %}">Agendamentos Pendentes</a></button>
-    </div>
-    {% block content_perfil %}
-    {% endblock %}
+  <div id="conteudo-principal">
+    <button>
+      <a href="{% url 'petconnect:consultas_agendadas' %}"
+        >Consultas Agendadas</a
+      >
+    </button>
+    <button>
+      <a href="{% url 'petconnect:consultas_anteriores' %}"
+        >Consultas Anteriores</a
+      >
+    </button>
+    <button>
+      <a href="{% url 'petconnect:consultas_pendentes' %}"
+        >Agendamentos Pendentes</a
+      >
+    </button>
+  </div>
+  {% block content_perfil %} {% endblock %}
 </main>
-{% endblock %}
-
-{% block footer %}
-{% endblock %}
+{% endblock %} {% block footer %} {% endblock %}

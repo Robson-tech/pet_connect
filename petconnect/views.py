@@ -49,6 +49,8 @@ def cadastro(request):
 
 @login_required(login_url='petconnect:login')
 def perfil_usuario(request):
+    if request.user.is_dono:
+        return render(request, 'petconnect/perfil_petshop.html')
     return render(request, 'petconnect/perfil_usuario.html')
 
 
@@ -122,3 +124,9 @@ def servicos(request):
     servicos = Servico.objects.all()
     context = {'servicos': servicos}
     return render(request, 'petconnect/servicos.html', context)
+
+
+def consultas_agendadas_dono(request):
+    agendamentos = Agendamento.objects.all()
+    context = {'agendamentos': agendamentos}
+    return render(request, 'petconnect/consultas_agendadas.html', context)

@@ -1,11 +1,16 @@
-{% extends 'petconnect/perfil_usuario.html' %}
+{% extends 'petconnect/perfil_petshop.html' %}
 
 {% load static %}
 
+{% block style %}
+<link rel="stylesheet" href="{% static 'css/perfil_petshop.css' %}" />
+<link rel="stylesheet" href="{% static 'css/perfil_usuario.css' %}">
+{% endblock %}
+
 {% block content_perfil %}
 <section>
-    {% if agendamentos %}
     <div class="consulta-agendada">
+        {% if agendamentos %}
         {% for agendamento in agendamentos %}
         <div class="consulta">
             <h3>{{ agendamento.data_agendamento }}</h3>
@@ -17,7 +22,8 @@
         {% endfor %}
         {% else %}
         <h3>Você não possui consultas agendadas.</h3>
+        <h4>Conheça nossos serviços <a href="/src/servicos.html">clicando aqui!</a></h4>
+        {% endif %}
     </div>
-    {% endif %}
 </section>
 {% endblock %}

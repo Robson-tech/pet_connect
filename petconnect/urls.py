@@ -9,8 +9,7 @@ urlpatterns = [
         template_name='petconnect/index.html'), name='index'),
     path('contato/', TemplateView.as_view(template_name='petconnect/contato.html'), name='contato'),
     path('sobre/', TemplateView.as_view(template_name='petconnect/sobre.html'), name='sobre'),
-    path('perfil_petshop/', TemplateView.as_view(template_name='petconnect/perfil_petshop.html'), name='perfil_petshop'),
-    path('avaliacoes/', TemplateView.as_view(template_name='petconnect/avaliacoes.html'), name='avaliacoes'),
+    path('promocoes/', TemplateView.as_view(template_name='petconnect/promocoes.html'), name='promocoes'),
 
     path('login/', views.logar, name='login'),
     path('logout/', views.deslogar, name='logout'),
@@ -25,5 +24,8 @@ urlpatterns = [
          name='consultas_pendentes'),
     path('agendar/', views.agendar_consulta, name='agendar_consulta'),
     path('servicos/', views.servicos, name='servicos'),
-    path('animais_cadastrados/', views.animais_cadastrados, name='animais_cadastrados'),
+    path('animais_cadastrados/', views.animais_cadastrados,
+         name='animais_cadastrados'),
+    path('consultas_agendadas/', views.consultas_agendadas_dono,
+         name='consultas_agendadas_dono'),
 ]
