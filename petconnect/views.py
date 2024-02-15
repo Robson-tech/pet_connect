@@ -5,10 +5,6 @@ import json
 from .models import Usuario, Animais, Servico, Agendamento
 
 
-def index(request):
-    return render(request, 'petconnect/index.html')
-
-
 def logar(request):
     if request.method == 'POST':
         email = request.POST['email']
@@ -42,7 +38,8 @@ def cadastro(request):
             if Usuario.objects.filter(email=email).exists():
                 context['error'] = 'Email já cadastrado'
             else:
-                user = Usuario.objects.create_user(first_name=first_name, last_name=last_name, email=email, cpf=cpf, telefone=telefone, password=senha1)
+                user = Usuario.objects.create_user(
+                    first_name=first_name, last_name=last_name, email=email, cpf=cpf, telefone=telefone, password=senha1)
                 user.save()
                 return render(request, 'petconnect/index.html')
         else:
@@ -63,7 +60,8 @@ def cadastro_animal(request):
         especie = request.POST['especie']
         raca = request.POST['raca']
         sexo = request.POST['sexo']
-        animal = Animais.objects.create(dono=request.user, nome=nome, idade=idade, especie=especie, raca=raca, sexo=sexo)
+        animal = Animais.objects.create(
+            dono=request.user, nome=nome, idade=idade, especie=especie, raca=raca, sexo=sexo)
         animal.save()
         return redirect('petconnect:perfil_usuario')
     return render(request, 'petconnect/cadastro_animal.html')
@@ -72,7 +70,8 @@ def cadastro_animal(request):
 @login_required(login_url='petconnect:login')
 def consultas_agendadas(request):
     context = {}
-    agendamentos = Agendamento.objects.filter(usuario=request.user, status=False)
+    agendamentos = Agendamento.objects.filter(
+        usuario=request.user, status=False)
     context['agendamentos'] = agendamentos
     return render(request, 'petconnect/agendamento/agendadas.html', context)
 
@@ -80,7 +79,8 @@ def consultas_agendadas(request):
 @login_required(login_url='petconnect:login')
 def consultas_anteriores(request):
     context = {}
-    agendamentos = Agendamento.objects.filter(usuario=request.user, status=True)
+    agendamentos = Agendamento.objects.filter(
+        usuario=request.user, status=True)
     context['agendamentos'] = agendamentos
     return render(request, 'petconnect/agendamento/anteriores.html', context)
 
@@ -100,7 +100,8 @@ def agendar_consulta(request):
         servico = Servico.objects.get(id=servico_id)
         animal = Animais.objects.get(id=animal_id)
         if animal and servico and data_consulta:
-            Agendamento.objects.create(usuario=request.user, servico=servico, animal=animal, data_consulta=data_consulta)
+            Agendamento.objects.create(
+                usuario=request.user, servico=servico, animal=animal, data_consulta=data_consulta)
         return redirect('petconnect:consultas_agendadas')
     else:
         servicos = Servico.objects.all()
@@ -110,9 +111,14 @@ def agendar_consulta(request):
         return render(request, 'petconnect/agendamento/agendar.html', context)
 
 
-def contato(request):
-    return render(request, 'petconnect/contato.html')
+@login_required(login_url='petconnect:login')
+def animais_cadastrados(request):
+    animais = Animais.objects.filter(dono=request.user)
+    context = {'animais': animais}
+    return render(request, 'petconnect/animais_cadastrados.html', context)
 
 
-def sobre(request):
-    return render(request, 'petconnect/sobre.html')
+def servicos(request):
+    servicos = Servico.objects.all()
+    context = {'servicos': servicos}
+    return render(request, 'petconnect/servicos.html', context)

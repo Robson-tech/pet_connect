@@ -1,0 +1,18 @@
+{% extends 'petconnect/perfil_usuario.html' %}
+
+{% load static %}
+
+{% block content_perfil %}
+<section>
+    {% for animal in animais %}
+    <div class="animais-card">
+        <div class="circulo2"></div>
+        <h2>{{ animal.nome }}</h2>
+        <h3>{{ animal.raca }}, {{ animal.idade }}</h3>
+        <button>Ver Mais</button>
+    </div>
+    {% endfor %}
+
+    <h4 id="animais-cadastro">Deseja cadastrar algum pet? <a href="{% url 'petconnect:cadastro_animal' %}">Clique aqui!</a></h4>
+</section>
+{% endblock %}

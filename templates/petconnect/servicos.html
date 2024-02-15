@@ -1,0 +1,37 @@
+{% extends 'petconnect/base.html' %}
+
+{% load static %}
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'css/servicos.css' %}" />
+{% endblock %}
+
+{% block content %}
+<main>
+  <div id="divBusca">
+    <img src="search3.png" alt="Buscar..." />
+    <input type="text" id="txtBusca" placeholder="Buscar..." />
+    <button id="btnBusca">Buscar</button>
+  </div>
+
+  <section id="cards-servico">
+    {% for servico in servicos %}
+    <div class="servico">
+      <img
+        src="{% static 'img/sample_cats.png' %}"
+        alt="servico-capa"
+        class="servico-capa"
+      />
+      <h3>{{ servico.nome }}</h3>
+      <p>{{ servico.descricao }}</p>
+
+      <div class="botao-card">
+        <a href="{% url 'petconnect:consultas_agendadas' %}"
+          >Agendar Consulta</a
+        >
+      </div>
+    </div>
+    {% endfor %}
+  </section>
+</main>
+{% endblock %}
