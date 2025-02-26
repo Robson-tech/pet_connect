@@ -1,0 +1,31 @@
+{% extends 'petconnect/base.html' %}
+
+{% load static %}
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'css/agendar.css' %}">
+{% endblock %}
+
+{% block content %}
+<h1>Realize seu agendamento!</h1>
+<div id="formulario">
+    <form action="{% url 'petconnect:agendar_consulta' %}" method="post">
+        {% csrf_token %}
+        <input type="date" name="datahorario" placeholder="Data/Horário">
+        <select id=servicos name="servico">
+            <option>Selecione o serviço</option>
+            {% for servico in servicos %}
+            <option value="{{ servico.id }}">{{ servico.nome }}</option>
+            {% endfor %}
+        </select>
+        <select id=animal name="animal">
+            <option>Selecione o animal</option>
+            {% for animal in animais %}
+            <option value="{{ animal.id }}">{{ animal.nome }}</option>
+            {% endfor %}
+        </select>
+        <input type="text" name="descricao" placeholder="Descrição">
+        <input type="submit" value="Concluir" class="botao"> 
+    </form>
+</div>
+{% endblock %}

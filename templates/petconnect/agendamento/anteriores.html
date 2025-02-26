@@ -4,8 +4,18 @@
 
 {% block content_perfil %}
 <section>
-    <div class="consulta"></div>
-    <div class="consulta"></div>
-    <div class="consulta"></div>
+    {% if agendamentos %}
+    {% for agendamento in agendamentos %}
+    <div class="consulta">
+        <h3>{{ agendamento.data_agendamento }}</h3>
+        <h3>{{ agendamento.data_consulta }}</h3>
+        <h4>{{ agendamento.servico }}</h4>
+        <h4>{{ agendamento.animal }}</h4>
+        <h4>{{ agendamento.descricao }}</h4>
+    </div>
+    {% endfor %}
+    {% else %}
+    <h3>Você ainda não fez consultas.</h3>
+    {% endif %}
 </section>
 {% endblock %}

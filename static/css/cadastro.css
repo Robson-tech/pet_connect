@@ -10,6 +10,9 @@ body {
 }
 
 header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #8600c6;
   height: 100px;
 }
@@ -38,57 +41,39 @@ h1 {
 }
 
 #formulario > form {
+  width: 500px;
+  border: 2px solid #8600c6;
   position: relative;
   display: inline-block;
 }
 
 form > input {
+  display: block;
   width: 400px;
   height: 40px;
-  background: #d9d9d9;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 20px;
+  margin: 20px auto;
+  padding: 0 8px;
   border: none;
-  margin-top: 20px;
-  padding-left: 10px;
+  border-radius: 20px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background: #d9d9d9;
   outline: 0;
-  display: block;
 }
 
-label {
-  font-size: 20px;
-  opacity: 0.7;
-}
-
-.botao,
-.botao > input {
+input[type="submit"] {
   width: 130px;
   height: 36px;
   font-size: 20px;
   background-color: #f4b706;
   color: #d9d9d9;
   display: inline-block;
-  margin-top: 30px;
-  margin-left: 10px;
+  margin: auto;
   border-radius: 20px;
   text-decoration: none;
   margin-bottom: 5px;
+  cursor: pointer;
 }
 
 #botao1 {
   border: none;
-}
-
-form a:hover {
-  border: none;
-}
-
-form :hover,
-#botao1:hover {
-  background-color: #f2e9eb;
-  transition: 1s;
-  transform: scale(1.1);
-  color: #8600c6;
-  border: #8600c6 1px solid;
-  cursor: pointer;
 }

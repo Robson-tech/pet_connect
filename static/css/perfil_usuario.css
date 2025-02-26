@@ -9,7 +9,6 @@
 body {
   background-color: #f5f3f3;
   width: 100%;
-  height: 500px;
 }
 
 body::-webkit-scrollbar {
@@ -162,7 +161,7 @@ section {
 
 .consulta,
 .animais-card {
-  width: 300px;
+  width: 280px;
   height: 300px;
   border: #8600c6 2px solid;
   margin: 20px;
@@ -178,7 +177,11 @@ section {
 }
 
 .consulta-agendada {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  height: 370px;
   margin-left: 20px;
+  overflow: scroll;
 }
 
 .animais-card {
